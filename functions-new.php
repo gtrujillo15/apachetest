@@ -8,15 +8,17 @@ function makeNav($conn, $loggedIn){
         echo "<li><a class=\"link\" href='" . $row['pagename'] . "'>" .$row['pagetitle']. "</a></li>";
     }
     if ($loggedIn == "not logged in"){
-    echo "<li><a href='login.php'>Log In</a></lli>"; 
+    echo "<li><a href='login.php'>Log In</a></li>";
+    } else {
+        echo "<li><a href='logout.php'>Log Out</a></li><br>";
+        echo "<p>Hello " . $_SESSION["realname"] . "</p>";
     }
     echo "</ul>";
-    
 }
 
 function makeContent($conn, $thisPagename){
     /* this creates the content from the content table based on the supplied $thisPagename variable.
-    t will then loop through all the maching content records and export those individually. */
+    It will then loop through all the maching content records and export those individually. */
     $sql = "SELECT * FROM test.content WHERE pagename = '$thisPagename'";
     $result = $conn->query($sql);
     //fetch_assoc takes sql result and returns it into an array. it takes data from query and makes it a stack of plates that we can grab

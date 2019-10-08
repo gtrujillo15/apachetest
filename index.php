@@ -2,7 +2,7 @@
 session_start();
 require_once("connect.php");
 require_once("functions-new.php");
-$loggedIn = $_SESSION['loggedin'];
+$loggedIn = $_SESSION['loggedin'] ?? "not logged in";
 //this pulls the text from after the first / in the url and sets it to an array
 $uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH));
 
@@ -37,7 +37,6 @@ if ($thisPagename == ""){
   <nav>
     <?php
     makeNav($conn, $loggedIn);
-    echo "<p>" . $loggedIn . "</p>";
     ?>
   </nav>
   </header>

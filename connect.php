@@ -1,6 +1,6 @@
 <?php
 // $loggedIn = "not logged in";
-$_SESSION["loggedin"] = "logged in";
+//$_SESSION["loggedin"] = "logged in";
 
 //this allows apache to redirect files based on .htaccess
 ini_set('display_errors', 1);
