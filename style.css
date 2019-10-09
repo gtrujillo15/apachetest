@@ -10,12 +10,20 @@ nav {
     width: 30%;
 }
 
+.logged-in {
+    background-color: #BF3F7F;
+}
+
+.logged-out {
+    background-color: #7FBF3F;
+}
+
 li {
     list-style-type:none; 
     display:inline-block; 
     padding-right:5%; 
     margin-right:4%; 
-    margin-top:5%;
+    padding-top:5%;
 }
 
 .link {
@@ -34,6 +42,14 @@ h1 {
     padding-top:2%;
 }
 
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
 p {
     text-align:center;
 }
@@ -47,5 +63,5 @@ p {
 footer {
     height: 100px; 
     width: 100%; 
-    background-color: gray;
+    background-color: lightslategray;
 }

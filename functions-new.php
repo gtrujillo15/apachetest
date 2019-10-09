@@ -8,9 +8,9 @@ function makeNav($conn, $loggedIn){
         echo "<li><a class=\"link\" href='" . $row['pagename'] . "'>" .$row['pagetitle']. "</a></li>";
     }
     if ($loggedIn == "not logged in"){
-    echo "<li><a href='login.php'>Log In</a></li>";
+    echo "<li class=\"logged-in\"><a href='login.php'>Log In</a></li>";
     } else {
-        echo "<li><a href='logout.php'>Log Out</a></li><br>";
+        echo "<li class=\"logged-out\"><a href='logout.php'>Log Out</a></li><br>";
         echo "<p>Hello " . $_SESSION["realname"] . "</p>";
     }
     echo "</ul>";
